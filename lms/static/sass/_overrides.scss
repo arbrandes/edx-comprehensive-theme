@@ -21,3 +21,60 @@
     box-shadow: .5em .5em .5em black;
   }
 }
+
+// General page setup
+html {
+  background-color: $hastexo-grey-dark !important;
+}
+
+// Logos
+.logo,
+.wrapper-logo {
+  img {
+    max-height: 50px;
+  }
+}
+
+// Header and footer
+.wrapper-footer {
+  margin-top: 0px !important;
+}
+
+.home {
+  background-color: $hastexo-grey-medium;
+
+  > header {
+    background-attachment: fixed;
+
+    .outer-wrapper {
+      animation: none !important;
+    }
+
+    .title {
+      background: none !important;
+      > hgroup {
+        h1 {
+          text-transform: none !important;
+          color: white;
+          text-shadow: 0 1px $hastexo-blue-dark !important;
+          font-weight: bold;
+          font-size: 500%;
+        }
+        h2 {
+          text-transform: none !important;
+          color: white;
+          text-shadow: 0 1px $hastexo-blue-dark !important;
+          font-size: 300%;
+        }
+        p {
+          text-transform: none !important;
+          color: white;
+          text-shadow: 0 1px $hastexo-blue-dark !important;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+}
