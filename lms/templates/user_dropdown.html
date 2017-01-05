@@ -61,25 +61,16 @@ profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
         </div>
     </div>
 % else:
-    <ol class="user">
-        <li class="primary">
-            <a href="${reverse('dashboard')}" class="user-link">
-                <span class="sr">${_("Dashboard for:")}</span>
-                <img class="user-image-frame" src="${profile_image_url}" alt="">
-                <div class="label-username">${username}</div>
-            </a>
-        </li>
+    <ol class="nav-global">
         <li class="primary">
             <div class="user-menu">
-                <button class="user-dropdown" aria-expanded="false" aria-haspopup="true">
-                    <span class="sr">${_("More options")}</span>
-                    <span class="fa fa-sort-desc" aria-hidden="true"></span>
-                </button>
                 <ul class="user-dropdown-menu" aria-label=${_("More Options")} role="menu">
                     ${navigation_dropdown_menu_links()}
-                    <li class="item"><a href="${reverse('logout')}" role="menuitem" class="user-dropdown-menuitem">${_("Sign Out")}</a></li>
                 </ul>
             </div>
         </li>
+    </ol>
+    <ol class="right nav-courseware list-inline">
+      <li class="item"><a href="${reverse('logout')}" role="menuitem" class="btn btn-login">${_("Sign Out")}</a></li>
     </ol>
 % endif

@@ -1,0 +1,18 @@
+## mako
+
+<%page expression_filter="h"/>
+
+<%namespace name='static' file='../../static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+
+# App that handles subdomain specific branding
+from branding import api as branding_api
+%>
+
+<a class="navbar-brand" href="${marketing_link('ROOT')}">
+  <div class="logo${" slim" if course else ""} logo-ubuntu">
+    <img width="118" height="27" src="https://assets.ubuntu.com/v1/bcc17b1c-logo-ubuntu-orange.png" alt="Ubuntu logo for print">
+    <span>Academy</span>
+  </div>
+</a>
